@@ -1,0 +1,96 @@
+.main-body {
+  font-family: "Trirong", serif;
+  padding-top: 10px;
+}
+
+.images {
+  height: 670px;
+  background-color: rgba(192, 185, 185, 0.329);
+  /* filter: grayscale(15%); */
+}
+
+.main h5 {
+  position: absolute;
+  color: white;
+  margin-top: -610px;
+  margin-left: 50px;
+  font-weight: 400;
+}
+
+.btns a {
+  text-align: center;
+  padding-top: 30px;
+  color: white;
+  font-weight: 600;
+  font-size: large;
+}
+
+.btn {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  border: 1px solid rgba(192, 185, 185, 0.329);
+  position: absolute;
+  margin-top: -350px;
+  margin-left: 50px;
+  background-color: rgba(192, 185, 185, 0.418);
+}
+
+.btn1 {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  border: 1px solid rgba(192, 185, 185, 0.329);
+  position: absolute;
+  margin-top: -350px;
+  margin-left: 170px;
+  background-color: rgba(192, 185, 185, 0.329);
+}
+
+.btn2 {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  border: 1px solid rgba(192, 185, 185, 0.329);
+  position: absolute;
+  margin-top: -350px;
+  margin-left: 290px;
+  background-color: rgba(192, 185, 185, 0.329);
+}
+
+.baap {
+  margin-top: -70px;
+  color: white;
+  margin-left: 30px;
+}
+
+.back h3 {
+  margin-top: 30px;
+}
+
+.date {
+  margin-top: 100px;
+}
+
+.date input {
+  padding: 0 90px;
+}
+
+.fname {
+  margin-left: 45px;
+  margin-top: 1px;
+}
+
+.fname select {
+  padding: 1.2px 21px;
+}
+
+.button3 {
+  padding: 6px 152px;
+  background-color: rgb(65, 62, 82);
+  color: white;
+}
+
+.cond {
+  margin-top: 20px;
+}
