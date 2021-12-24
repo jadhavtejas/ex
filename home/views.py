@@ -11,13 +11,15 @@ def index(request):
         firstname = request.POST.get('firstname')
         lastname = request.POST.get('last_name')
         number = request.POST.get('number')
-        Visit111 = book(firstname=firstname)
-        Visit111.save()
+        # print(firstname)
+        # Visit111 = book(firstname = firstname,lastname=lastname,number=number)
+        # Visit111.save()
+        return HttpResponse(firstname)
     data = {
         "title": 'Login',
         "headding": "Login",
     }
-    return render(request, '../templates/HTML/index.html', data,)
+    return render(request, '../templates/HTML/index.html', data)
 
 
 def home(request):
