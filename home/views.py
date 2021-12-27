@@ -1,33 +1,34 @@
 from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.shortcuts import HttpResponse
-from home.models import Book
+from home.models import Visit
 
 # Create your views here.
 
 
+
 def index(request):
+    # return HttpResponse("Hello!! I am on homepage")
     if request.method == "POST":
-        firstname = request.POST.get('firstname')
-        lastname = request.POST.get('last_name')
-        number = request.POST.get('number')
-        # return HttpResponse(firstname)
-        Visit111 = Book(firstname = firstname,lastname=lastname,number=number)
+        fromdate = request.POST.get('fromdate')
+        todate = request.POST.get('todate')
+        noofguest = request.POST.get('noofguest')
+        typeofacc = request.POST.get('typeofacc')
+        # return HttpResponse(fromdate)
+        Visit111 = Visit(fromdate=fromdate, todate=todate,
+                         noofguest=noofguest, typeofacc=typeofacc)
         Visit111.save()
 
     data = {
-        "title": 'Login',
-        "headding": "Login",
+        "title": "Home Page",
+        "description": "BAAP AGRO!!!"
     }
     return render(request, 'HTML/index.html', data)
 
 
-# def home(request):
-#     data = {
-#         "title": 'AgroFarm',
-#         "headding": "AgroFarm",
-#     }
-#     return render(request, '../templates/HTML/home.html', data)
+def contact(request):
+    # return HttpResponse("Hello!! I am on contact~!")
+    return render(request, 'contact.html')
 
 
 def contact(request):
