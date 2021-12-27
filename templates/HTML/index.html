@@ -91,31 +91,44 @@
 </body>
 </html> -->
 
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{{ title }}</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <h1>{{ title }}</h1>
-        <img src="static/1.jpg">
-        <h2>{{ description }}</h2>
-        <form id="visit" name="visit" action="" method="post">
-            {% csrf_token %}
-            <!-- {% csrf_token %}  -->
-            <input type="text" id="fromdate" name="fromdate"  placeholder="fromdate" ><br>
-            <input type="text" id="todate" name="todate"  placeholder="todate" ><br>
-            <input type="text" id="noofguest" name="noofguest"  placeholder="noofguest" ><br>
-            <input type="text" id="typeofacc" name="typeofacc"  placeholder="typeofacc" ><br><br><br>
-            <input type="submit" name="submit" value="submit"><br>
-        </form>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{{ title }}</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <h1>{{ title }}</h1>
+    <img src="static/1.jpg" />
+    <h2>{{ description }}</h2>
+    <form id="visit" name="visit" action="" method="post">
+      {% csrf_token %}
+      <input
+        type="text"
+        id="fromdate"
+        name="fromdate"
+        placeholder="fromdate"
+      /><br />
+      <input type="text" id="todate" name="todate" placeholder="todate" /><br />
+      <input
+        type="text"
+        id="noofguest"
+        name="noofguest"
+        placeholder="noofguest"
+      /><br />
+      <input
+        type="text"
+        id="typeofacc"
+        name="typeofacc"
+        placeholder="typeofacc"
+      /><br /><br /><br />
+      <input type="submit" name="submit" value="submit" /><br />
+    </form>
 
-        <script src="" async defer></script>
-    </body>
+    <script src="" async defer></script>
+  </body>
 </html>
