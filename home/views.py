@@ -5,10 +5,8 @@ from home.models import Visit
 
 # Create your views here.
 
-
-
+ 
 def index(request):
-    # return HttpResponse("Hello!! I am on homepage")
     if request.method == "POST":
         fromdate = request.POST.get('fromdate')
         todate = request.POST.get('todate')
@@ -23,12 +21,13 @@ def index(request):
         "title": "Home Page",
         "description": "BAAP AGRO!!!"
     }
+    # return HttpResponse("Hello!! I am on homepage")
     return render(request, 'HTML/index.html', data)
 
 
 def contact(request):
     # return HttpResponse("Hello!! I am on contact~!")
-    return render(request, 'contact.html')
+    return render(request, 'HTML/login.html')
 
 
 def contact(request):
