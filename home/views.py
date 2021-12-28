@@ -2,9 +2,10 @@ from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.shortcuts import HttpResponse
 from rest_framework import serializers
-from baapagro.home.serializer import Visitserilizer
+from home.serializer import Visitserilizer
 from home.models import Visit
 from rest_framework.renderers import JSONRenderer
+import requests
 
 # Create your views here.
 
@@ -34,8 +35,7 @@ def contact(request):
 
 def Visit_details(request):
     #collecting the data
-    visit_details = Visit.get(id=1)
+    visit_details = Visit.objects.get(id=9)
     serializer_data = Visitserilizer(visit_details)
-
-    json_data = JSONRenderer().render(serializer_data)
+    json_data = JSONRenderer().render(serializer_data.data)
     return HttpResponse(json_data)
