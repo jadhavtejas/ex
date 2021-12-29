@@ -9,7 +9,7 @@ import requests
 
 # Create your views here.
 
- 
+
 def index(request):
     if request.method == "POST":
         fromdate = request.POST.get('fromdate')
@@ -33,9 +33,17 @@ def contact(request):
     # return HttpResponse("Hello!! I am on contact~!")
     return render(request, 'HTML/login.html')
 
-def Visit_details(request):
-    #collecting the data
-    visit_details = Visit.objects.get(id=9)
+
+def Visit_details(request, pk):
+    # collecting the data
+    visit_details = Visit.objects.get(id=pk)
     serializer_data = Visitserilizer(visit_details)
+    json_data = JSONRenderer().render(serializer_data.data)
+    return HttpResponse(json_data)
+
+
+def Visit_list(requests):
+    visit_details = Visit.objects.all()
+    serializer_data = Visitserilizer(visit_details, many=True)
     json_data = JSONRenderer().render(serializer_data.data)
     return HttpResponse(json_data)
