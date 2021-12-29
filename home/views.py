@@ -1,3 +1,4 @@
+from django.http import response
 from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.shortcuts import HttpResponse
@@ -47,3 +48,10 @@ def Visit_list(requests):
     serializer_data = Visitserilizer(visit_details, many=True)
     json_data = JSONRenderer().render(serializer_data.data)
     return HttpResponse(json_data)
+
+
+def VisitData(request):
+    url = 'http://127.0.0.1:8000/visit_list/'
+    r = requests.get(url=url)
+    data = r.json()
+    return render(request, 'HTML/display.html', {'response': data})

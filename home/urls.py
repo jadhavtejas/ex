@@ -7,4 +7,5 @@ urlpatterns = [
     path('contact/', views.contact, name='conatct'),
     path('visit_list/', views.Visit_list, name='Visit_list_api'),
     path('visit_details/<pk>', views.Visit_details, name='Visit_details_api'),
+    path('visitdata/', views.VisitData, name='VisitData'),
 ]
