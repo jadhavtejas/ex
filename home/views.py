@@ -27,7 +27,7 @@ def index(request):
         "description": "BAAP AGRO!!!"
     }
     # return HttpResponse("Hello!! I am on homepage")
-    return render(request, 'HTML/index.html', data)
+    return render(request, 'HTML/login.html', data)
 
 
 def contact(request):
@@ -55,3 +55,14 @@ def VisitData(request):
     r = requests.get(url=url)
     data = r.json()
     return render(request, 'HTML/display.html', {'response': data})
+
+
+def login(request):
+    return render(request,'HTML/login.html')
+
+
+def register(request):
+    return render(request,'HTML/register.html')
+
+def main(request):
+    return render(request,'HTML/index.html')
